@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+            thead {
+                display: none;
+            }
+            tr {
+                border-bottom: 3px solid #ddd;
+                display: block;
+                margin-bottom: 5px;
+            }
+            td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                text-align: right;
+            }
+            td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table id="responsive-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Joining Date</th>
+                <th>Total Experience</th>
+                <th>Relevant Experience</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="First Name">Nadim</td>
+                <td data-label="Last Name">Marks</td>
+                <td data-label="Job Title">Developer</td>
+                <td data-label="Joining Date">December 15, 2023</td>
+                <td data-label="Total Experience">5</td>
+                <td data-label="Relevant Experience">4</td>
+                <td data-label="Date of Birth">June 30, 2010</td>
+            </tr>
+            <!-- More rows here -->
+        </tbody>
+    </table>
+</body>
+</html>
